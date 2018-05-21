@@ -9,6 +9,7 @@ import com.yanxisir.neb.service.INebApiUserService;
 import com.yanxisir.neb.service.INebSubscribeService;
 import okhttp3.ConnectionPool;
 import okhttp3.FormBody;
+import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.RequestBody;
 import okhttp3.ResponseBody;
@@ -22,6 +23,7 @@ import retrofit2.Converter;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 
+import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.io.Serializable;
 import java.lang.annotation.Annotation;
@@ -94,13 +96,7 @@ public class HttpConfig {
     public static class ConverterFactoryWithSerialization<T extends Serializable> extends Converter.Factory {
         @Override
         public Converter<?, RequestBody> requestBodyConverter(Type type, Annotation[] parameterAnnotations, Annotation[] methodAnnotations, Retrofit retrofit) {
-            return (Converter<T, RequestBody>) t -> {
-                SerializeConfig jsonConfig = new SerializeConfig();
-                FormBody.Builder formBuilder = new FormBody.Builder();
-                JSONObject jsonMap = (JSONObject) JSON.parse(JSON.toJSONString(t, jsonConfig));
-                jsonMap.forEach((key, value) -> formBuilder.add(key, JSON.toJSONString(value, jsonConfig)));
-                return formBuilder.build();
-            };
+            return (Converter<Object, RequestBody>) o -> RequestBody.create(MediaType.parse("application/json"), JSON.toJSONString(o));
         }
 
         @Override
