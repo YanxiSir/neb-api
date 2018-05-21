@@ -39,15 +39,11 @@ public class HttpConfig {
     @Autowired
     private NebProperties nebProperties;
 
-//    @Value("${neb.host}")
-//    private String hostUrl;
-
     @Scope
     @Bean
     public INebApiUserService createNebApiUserService(OkHttpClient client) {
         Retrofit retrofit = new Retrofit.Builder()
                 .client(client)
-//                .baseUrl(hostUrl)
                 .baseUrl(nebProperties.getHost())
                 .addConverterFactory(new ConverterFactoryWithSerialization<>())
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
@@ -61,7 +57,6 @@ public class HttpConfig {
         Retrofit retrofit = new Retrofit.Builder()
                 .client(client)
                 .baseUrl(nebProperties.getHost())
-//                .baseUrl(hostUrl)
                 .addConverterFactory(new ConverterFactoryWithSerialization<>())
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .build();
@@ -74,7 +69,6 @@ public class HttpConfig {
         Retrofit retrofit = new Retrofit.Builder()
                 .client(client)
                 .baseUrl(nebProperties.getHost())
-//                .baseUrl(hostUrl)
                 .addConverterFactory(new ConverterFactoryWithSerialization<>())
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .build();

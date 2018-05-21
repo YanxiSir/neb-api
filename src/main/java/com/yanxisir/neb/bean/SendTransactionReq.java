@@ -29,5 +29,4 @@ public class SendTransactionReq implements Serializable {
     private BigDecimal gasLimit;
 
     private String type;
-
 }

@@ -17,7 +17,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.PropertySource;
 
 import java.math.BigDecimal;
@@ -31,8 +30,8 @@ import java.math.BigDecimal;
         "classpath:application-test.properties"
 })
 @RunWith(JUnit4ClassRunner.class)
-@ComponentScan(basePackages = "com.yanxisir.neb")
 @EnableAutoConfiguration
+@EnableNebHttp
 public class TestNebUserApi {
 
     @Autowired
