@@ -81,7 +81,7 @@ public class TestNebUserApi {
     @Test
     public void blockByHash() {
         BlockByHashReq req = BlockByHashReq.builder()
-                .hash("")
+                .hash("e57d6aa65107464726dc03afdd176fd660c993b6cf5dc47fff9d69178b505162")
                 .fullFillTransaction(true)
                 .build();
         userService.blockByHash(req).toBlocking().first().getResult();

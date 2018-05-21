@@ -1,6 +1,7 @@
 package com.yanxisir.neb;
 
 import com.yanxisir.neb.bean.SubscribeReq;
+import com.yanxisir.neb.bean.enums.ENebTopic;
 import com.yanxisir.neb.service.INebSubscribeService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
@@ -29,7 +30,7 @@ public class TestNebSubscribe {
     @Test
     public void subscribe() {
         SubscribeReq req = SubscribeReq.builder()
-                .topics(new String[]{""})
+                .topics(new String[]{ENebTopic.LIB_BLOCK.getValue()})
                 .build();
         subscribeService.subscribe(req).toBlocking().first().getResult();
     }
