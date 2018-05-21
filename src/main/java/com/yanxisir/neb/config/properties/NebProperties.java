@@ -15,6 +15,4 @@ import org.springframework.stereotype.Component;
 public class NebProperties {
 
     private String host;
-    private String port;
-
 }

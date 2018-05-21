@@ -1,3 +1,7 @@
 neb:
-    host: http://localhost
-    port: 8080
+#### 私有节点
+#    host: http://localhost:8685
+#### 主网
+#    host: http://mainnet.nebulas.io
+#### 测试网
+    host: http://testnet.nebulas.io
