@@ -1,7 +1,7 @@
 neb:
 #### 私有节点
-#    host: http://localhost:8685
+#    host: https://localhost:8685
 #### 主网
-#    host: http://mainnet.nebulas.io
+#    host: https://mainnet.nebulas.io
 #### 测试网
-    host: http://testnet.nebulas.io
+    host: https://testnet.nebulas.io
