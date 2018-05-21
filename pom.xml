@@ -4,13 +4,42 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.yanxisir.neb</groupId>
+    <groupId>com.yanxisir</groupId>
     <artifactId>neb-call</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>0.0.1</version>
+    <packaging>jar</packaging>
+    <description>A http toolkit for nebulas</description>
 
     <name>neb-call</name>
-    <!-- FIXME change it to the project's website -->
-    <url>http://www.example.com</url>
+    <url>https://github.com/YanxiSir/neb-api</url>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <scm>
+        <connection>scm:git:git@github.com:YanxiSir/neb-api.git</connection>
+        <developerConnection>scm:git:git@github.com:YanxiSir/neb-api.git</developerConnection>
+        <url>https://github.com/YanxiSir/neb-api</url>
+    </scm>
+
+    <developers>
+        <developer>
+            <id>YanxiSir</id>
+            <name>Yanxi</name>
+            <email>yanxisir@gmail.com</email>
+            <url>https://github.com/YanxiSir/neb-api</url>
+            <timezone>+8</timezone>
+        </developer>
+    </developers>
+
+    <issueManagement>
+        <system>github</system>
+        <url>https://github.com/YanxiSir/neb-api/issues</url>
+    </issueManagement>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -136,4 +165,17 @@
     <build>
 
     </build>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>sonatype</id>
+            <name>Sonatype Nexus Snapshots</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>sonatype</id>
+            <name>Nexus Release Repository</name>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
 </project>
