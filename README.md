@@ -42,7 +42,15 @@ public class TestNebUserApi {
 }
 ```
 
+### 方法详解
 
+Nebulas接口来自两个wiki：[rpc_user](https://github.com/nebulasio/wiki/blob/master/rpc.md) 、[rpc_admin](https://github.com/nebulasio/wiki/blob/master/rpc_admin.md) 
+
+分三种类型，具体方法见接口详情
+
+- INebApiAdminService 
+- INebApiUserService
+- INebSubscribeService
 
 
 
