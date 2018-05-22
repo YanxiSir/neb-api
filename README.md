@@ -52,5 +52,7 @@ Nebulas接口来自两个wiki：[rpc_user](https://github.com/nebulasio/wiki/blo
 - INebApiUserService
 - INebSubscribeService
 
+测试用例在 `test-case` 分支
+
 
 

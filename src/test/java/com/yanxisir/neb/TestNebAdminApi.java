@@ -52,7 +52,7 @@ public class TestNebAdminApi {
     @Test
     public void newAccount() {
         NewAccountReq req = NewAccountReq.builder()
-                .passphrase("")
+                .passphrase("123")
                 .build();
         adminService.newAccount(req).toBlocking().first().getResult();
     }
