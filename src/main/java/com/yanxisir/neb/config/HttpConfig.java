@@ -46,7 +46,7 @@ public class HttpConfig {
     public INebApiUserService createNebApiUserService(OkHttpClient client) {
         Retrofit retrofit = new Retrofit.Builder()
                 .client(client)
-                .baseUrl(nebProperties.getHost())
+                .baseUrl(nebProperties.getHttp().getHost())
                 .addConverterFactory(new ConverterFactoryWithSerialization<>())
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .build();
@@ -58,7 +58,7 @@ public class HttpConfig {
     public INebApiAdminService createNebApiAdminService(OkHttpClient client) {
         Retrofit retrofit = new Retrofit.Builder()
                 .client(client)
-                .baseUrl(nebProperties.getHost())
+                .baseUrl(nebProperties.getHttp().getHost())
                 .addConverterFactory(new ConverterFactoryWithSerialization<>())
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .build();
@@ -70,7 +70,7 @@ public class HttpConfig {
     public INebSubscribeService createNebSubscribeService(OkHttpClient client) {
         Retrofit retrofit = new Retrofit.Builder()
                 .client(client)
-                .baseUrl(nebProperties.getHost())
+                .baseUrl(nebProperties.getHttp().getHost())
                 .addConverterFactory(new ConverterFactoryWithSerialization<>())
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .build();

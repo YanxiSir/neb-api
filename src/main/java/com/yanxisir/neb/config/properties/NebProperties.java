@@ -13,5 +13,11 @@ import org.springframework.stereotype.Component;
 @ConfigurationProperties(prefix = "neb")
 public class NebProperties {
 
-    private String host;
+    private final Http http = new Http();
+
+    @Data
+    public static class Http {
+
+        private String host;
+    }
 }
