@@ -10,7 +10,6 @@ import org.springframework.stereotype.Component;
  * @since 2018/5/18
  */
 @Data
-@Component
 @ConfigurationProperties(prefix = "neb")
 public class NebProperties {
 
