@@ -1,12 +1,15 @@
 package com.yanxisir.neb;
 
+import com.alibaba.fastjson.JSON;
 import com.yanxisir.neb.bean.AccountStateReq;
+import com.yanxisir.neb.bean.AccountStateResp;
 import com.yanxisir.neb.bean.BlockByHashReq;
 import com.yanxisir.neb.bean.BlockByHeightReq;
 import com.yanxisir.neb.bean.CallReq;
 import com.yanxisir.neb.bean.DynastyReq;
 import com.yanxisir.neb.bean.EstimateGasReq;
 import com.yanxisir.neb.bean.EventsByHashReq;
+import com.yanxisir.neb.bean.NebResult;
 import com.yanxisir.neb.bean.RawTransactionReq;
 import com.yanxisir.neb.bean.TransactionByContractReq;
 import com.yanxisir.neb.bean.TransactionReceiptReq;
@@ -46,9 +49,10 @@ public class TestNebUserApi {
     @Test
     public void accountState() {
         AccountStateReq req = AccountStateReq.builder()
-                .address("")
+                .address("n1JE2mf65ryVScatTsnP8M9U5c1VSFmzvaZ")
                 .build();
-        userService.accountState(req).toBlocking().first().getResult();
+        AccountStateResp result = userService.accountState(req).toBlocking().first().getResult();
+        log.info("result:{}", JSON.toJSONString(result));
     }
 
     @Test
