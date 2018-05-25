@@ -9,7 +9,6 @@ import com.yanxisir.neb.bean.CallReq;
 import com.yanxisir.neb.bean.DynastyReq;
 import com.yanxisir.neb.bean.EstimateGasReq;
 import com.yanxisir.neb.bean.EventsByHashReq;
-import com.yanxisir.neb.bean.NebResult;
 import com.yanxisir.neb.bean.RawTransactionReq;
 import com.yanxisir.neb.bean.TransactionByContractReq;
 import com.yanxisir.neb.bean.TransactionReceiptReq;

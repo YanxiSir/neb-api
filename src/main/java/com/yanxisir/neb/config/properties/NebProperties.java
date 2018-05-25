@@ -2,8 +2,6 @@ package com.yanxisir.neb.config.properties;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.stereotype.Component;
 
 /**
  * @author YanxiSir
@@ -13,5 +11,11 @@ import org.springframework.stereotype.Component;
 @ConfigurationProperties(prefix = "neb")
 public class NebProperties {
 
-    private String host;
+    private final Http http = new Http();
+
+    @Data
+    public static class Http {
+
+        private String host;
+    }
 }

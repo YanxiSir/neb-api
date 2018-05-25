@@ -1,4 +1,5 @@
 neb:
+  http:
 #### 私有节点
 #    host: https://localhost:8685
 #### 主网
