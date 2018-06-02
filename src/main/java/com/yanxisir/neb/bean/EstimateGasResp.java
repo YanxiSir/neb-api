@@ -3,7 +3,7 @@ package com.yanxisir.neb.bean;
 import lombok.Data;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
+import java.math.BigInteger;
 
 /**
  * @author YanxiSir
@@ -12,6 +12,6 @@ import java.math.BigDecimal;
 @Data
 public class EstimateGasResp implements Serializable {
 
-    private BigDecimal gas;
+    private BigInteger gas;
     private String err;
 }

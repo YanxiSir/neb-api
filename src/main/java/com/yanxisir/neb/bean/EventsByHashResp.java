@@ -4,7 +4,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 import lombok.Data;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.util.List;
 
 /**
@@ -28,7 +28,7 @@ public class EventsByHashResp implements Serializable {
         private String hash;
         private Integer status;
         @JSONField(name = "gas_used")
-        private BigDecimal gasUsed;
+        private BigInteger gasUsed;
         private String error;
     }
 }

@@ -5,7 +5,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 import lombok.Data;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.util.Date;
 
 /**
@@ -26,12 +26,12 @@ public class SubscribeResp implements Serializable {
         private String from;
         private String to;
         private Integer nonce;
-        private BigDecimal value;
+        private BigInteger value;
         private Date timestamp;
         @JSONField(name = "gasprice")
-        private BigDecimal gasPrice;
+        private BigInteger gasPrice;
         @JSONField(name = "gaslimit")
-        private BigDecimal gasLimit;
+        private BigInteger gasLimit;
         private String type;
     }
 }

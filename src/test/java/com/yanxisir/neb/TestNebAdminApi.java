@@ -18,7 +18,7 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.PropertySource;
 
-import java.math.BigDecimal;
+import java.math.BigInteger;
 
 /**
  * @author YanxiSir
@@ -79,10 +79,10 @@ public class TestNebAdminApi {
                 .transaction(SendTransactionReq.builder()
                         .from("")
                         .to("")
-                        .value(new BigDecimal(0))
+                        .value(BigInteger.valueOf(0))
                         .nonce(1)
-                        .gasPrice(new BigDecimal(1))
-                        .gasLimit(new BigDecimal(1))
+                        .gasPrice(BigInteger.valueOf(1))
+                        .gasLimit(BigInteger.valueOf(1))
                         .type(ETxType.CALL.getValue())
                         .build())
                 .build();
@@ -96,10 +96,10 @@ public class TestNebAdminApi {
                 .transaction(SendTransactionReq.builder()
                         .from("")
                         .to("")
-                        .value(new BigDecimal(0))
+                        .value(BigInteger.valueOf(0))
                         .nonce(1)
-                        .gasPrice(new BigDecimal(1))
-                        .gasLimit(new BigDecimal(1))
+                        .gasPrice(BigInteger.valueOf(1))
+                        .gasLimit(BigInteger.valueOf(1))
                         .type(ETxType.CALL.getValue())
                         .build())
                 .build();
@@ -111,10 +111,10 @@ public class TestNebAdminApi {
         SendTransactionReq req = SendTransactionReq.builder()
                 .from("")
                 .to("")
-                .value(new BigDecimal(0))
+                .value(BigInteger.valueOf(0))
                 .nonce(1)
-                .gasPrice(new BigDecimal(1))
-                .gasLimit(new BigDecimal(1))
+                .gasPrice(BigInteger.valueOf(1))
+                .gasLimit(BigInteger.valueOf(1))
                 .type(ETxType.CALL.getValue())
                 .build();
         adminService.sendTransaction(req).toBlocking().first().getResult();

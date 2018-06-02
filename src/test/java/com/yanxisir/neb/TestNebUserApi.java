@@ -21,7 +21,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.PropertySource;
 
-import java.math.BigDecimal;
+import java.math.BigInteger;
 
 /**
  * @author YanxiSir
@@ -64,10 +64,10 @@ public class TestNebUserApi {
         CallReq req = CallReq.builder()
                 .from("")
                 .to("")
-                .value(new BigDecimal(0))
+                .value(BigInteger.valueOf(0))
                 .nonce(1)
-                .gasPrice(new BigDecimal(1))
-                .gasLimit(new BigDecimal(1))
+                .gasPrice(BigInteger.valueOf(1))
+                .gasLimit(BigInteger.valueOf(1))
                 .type(ETxType.CALL.getValue())
                 .build();
         userService.call(req).toBlocking().first().getResult();
@@ -125,10 +125,10 @@ public class TestNebUserApi {
         EstimateGasReq req = EstimateGasReq.builder()
                 .from("")
                 .to("")
-                .value(new BigDecimal(0))
+                .value(BigInteger.valueOf(0))
                 .nonce(1)
-                .gasPrice(new BigDecimal(1))
-                .gasLimit(new BigDecimal(1))
+                .gasPrice(BigInteger.valueOf(1))
+                .gasLimit(BigInteger.valueOf(1))
                 .type(ETxType.CALL.getValue())
                 .build();
         userService.estimateGas(req).toBlocking().first();
