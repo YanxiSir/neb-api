@@ -2,6 +2,7 @@ package com.yanxisir.neb.service;
 
 import com.yanxisir.neb.bean.NebResult;
 import com.yanxisir.neb.bean.SubscribeReq;
+import com.yanxisir.neb.bean.SubscribeResp;
 import retrofit2.http.Body;
 import retrofit2.http.POST;
 import rx.Observable;
@@ -13,5 +14,5 @@ import rx.Observable;
 public interface INebSubscribeService {
 
     @POST("/v1/user/subscribe")
-    Observable<NebResult> subscribe(@Body SubscribeReq req);
+    Observable<NebResult<SubscribeResp>> subscribe(@Body SubscribeReq req);
 }

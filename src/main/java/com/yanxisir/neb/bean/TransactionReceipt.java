@@ -4,7 +4,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 import lombok.Data;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.util.Date;
 
 /**
@@ -18,15 +18,15 @@ public class TransactionReceipt implements Serializable {
     private String chainId;
     private String from;
     private String to;
-    private BigDecimal value;
+    private BigInteger value;
     private Integer nonce;
     private Date timestamp;
     private String type;
     private String data;
     @JSONField(name = "gas_price")
-    private BigDecimal gasPrice;
+    private BigInteger gasPrice;
     @JSONField(name = "gas_limit")
-    private BigDecimal gasLimit;
+    private BigInteger gasLimit;
     @JSONField(name = "contract_address")
     private String contractAddress;
     /**
@@ -34,5 +34,5 @@ public class TransactionReceipt implements Serializable {
      */
     private Integer status;
     @JSONField(name = "gas_used")
-    private BigDecimal gasUsed;
+    private BigInteger gasUsed;
 }

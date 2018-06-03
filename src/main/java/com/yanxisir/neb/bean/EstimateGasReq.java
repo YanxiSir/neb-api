@@ -7,7 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
+import java.math.BigInteger;
 
 /**
  * @author YanxiSir
@@ -21,12 +21,12 @@ public class EstimateGasReq implements Serializable {
 
     private String from;
     private String to;
-    private BigDecimal value;
+    private BigInteger value;
     private Integer nonce;
     @JSONField(name = "gas_price")
-    private BigDecimal gasPrice;
+    private BigInteger gasPrice;
     @JSONField(name = "gas_limit")
-    private BigDecimal gasLimit;
+    private BigInteger gasLimit;
 
     private String type;
 }

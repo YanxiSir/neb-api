@@ -4,7 +4,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 import lombok.Data;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
+import java.math.BigInteger;
 
 /**
  * @author YanxiSir
@@ -14,5 +14,5 @@ import java.math.BigDecimal;
 public class GasPriceResp implements Serializable {
 
     @JSONField(name = "gas_price")
-    private BigDecimal gasPrice;
+    private BigInteger gasPrice;
 }

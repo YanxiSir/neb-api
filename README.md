@@ -52,5 +52,15 @@ Nebulas接口来自两个wiki：[rpc_user](https://github.com/nebulasio/wiki/blo
 - INebApiUserService
 - INebSubscribeService
 
-
 测试用例在 `test-case` 分支
+
+
+`maven依赖`
+```$xslt
+<!-- https://mvnrepository.com/artifact/com.yanxisir/neb-call -->
+<dependency>
+    <groupId>com.yanxisir</groupId>
+    <artifactId>neb-call</artifactId>
+    <version>0.0.3</version>
+</dependency>
+```

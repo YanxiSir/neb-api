@@ -16,8 +16,9 @@ public enum ENebTopic {
      */
 
     LIB_BLOCK("chain.latestIrreversibleBlock"),
+
     /**
-     * The topic of executing & submitting tx.
+     * The topic of executing and submitting tx.
      */
     TX_RESULT("chain.transactionResult"),
 
