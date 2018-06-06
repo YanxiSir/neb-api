@@ -6,7 +6,7 @@
 
     <groupId>com.yanxisir</groupId>
     <artifactId>neb-call</artifactId>
-    <version>0.0.3</version>
+    <version>0.0.7-SNAPSHOT</version>
     <packaging>jar</packaging>
     <description>A http toolkit for nebulas</description>
 

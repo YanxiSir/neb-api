@@ -24,7 +24,7 @@ public interface INebApiUserService {
     Observable<NebResult<LatestIrreversibleBlockResp>> lib();
 
     @POST("/v1/user/call")
-    Observable<CallResp> call(@Body CallReq req);
+    Observable<NebResult<CallResp>> call(@Body CallReq req);
 
     @POST("/v1/user/rawtransaction")
     Observable<NebResult<RawTransactionResp>> rawTransaction(@Body RawTransactionReq req);

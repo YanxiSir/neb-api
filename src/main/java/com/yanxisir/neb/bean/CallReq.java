@@ -21,11 +21,12 @@ public class CallReq implements Serializable {
 
     private String from;
     private String to;
-    private BigInteger value;
+    private String value;
     private Integer nonce;
     @JSONField(name = "gas_price")
-    private BigInteger gasPrice;
+    private String gasPrice;
     @JSONField(name = "gas_limit")
-    private BigInteger gasLimit;
+    private String gasLimit;
     private String type;
+    private Contract contract;
 }
