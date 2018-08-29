@@ -64,10 +64,10 @@ public class TestNebUserApi {
         CallReq req = CallReq.builder()
                 .from("")
                 .to("")
-                .value(BigInteger.valueOf(0))
+                .value("0")
                 .nonce(1)
-                .gasPrice(BigInteger.valueOf(1))
-                .gasLimit(BigInteger.valueOf(1))
+                .gasPrice("1")
+                .gasLimit("1")
                 .type(ETxType.CALL.getValue())
                 .build();
         userService.call(req).toBlocking().first().getResult();
